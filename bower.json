@@ -1,0 +1,23 @@
+{
+  "name": "stephencsmall.github.io",
+  "version": "1.0.0",
+  "homepage": "https://github.com/stephencsmall/stephencsmall.github.io",
+  "authors": [
+    "Stephen Small <stephencsmall@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootflat": "*",
+    "bootstrap": "~3.3.2"
+  }
+}
