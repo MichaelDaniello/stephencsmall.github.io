@@ -61,15 +61,43 @@
             </div>
             <div class="col-sm-6 col-md-6">
                 <div class="thumbnail">
-                    <img class="img-rounded" src="img/thumbnail-4.jpg">
                     <div class="caption text-center">
+                        <div>
+                            <p id="pekText">?</p>
+                        </div>
                         <h3>Popek Generator</h3
                         ><p><i>Andrew built it.</i></p>
-                        <p><a href="#" class="btn btn-primary" role="button">Gimmie a Pek</a> <a href="https://youtu.be/jr0JaXfKj68" class="btn btn-default" role="button">One Pek only please</a></p>
+                        <p><a id="pekButton" class="btn btn-primary" role="button">Gimmie a Pek</a> <a href="https://youtu.be/jr0JaXfKj68" class="btn btn-default" role="button">One Pek only please</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script> 
+        var myButton = document.getElementById("pekButton");
+        var myText = document.getElementById("pekText");
+
+        myButton.addEventListener('click', doSomething, false);
+
+        function doSomething() {
+            myText.textContent = "hello, world!";
+            
+            var PATwords = ["Pat","Pot","Poot","Pro","Pom","Pop","Porta","Pop","Pho","Pam","Patty","Patak","Pad"];
+            var RICKwords = ["rick","rock","ronk","rook","rank","root","rock","pick","stick","rickly"];
+            var POwords = ["Po","Pro","Lo","Sno","Poo","No","Pee","Jingle","Jangle","Pie","Toe"];
+            var PEKwords = ["pek","pok","pook","prok","pram","deck","fleck","check","chop","tech","gasm"];
+            
+            var FirstnamePrefix = PATwords[Math.floor(Math.random()*PATwords.length)];
+            var FirstnameSuffix = RICKwords[Math.floor(Math.random()*RICKwords.length)];
+            var LastnamePrefix = POwords[Math.floor(Math.random()*POwords.length)];
+            var LastnameSuffix = PEKwords[Math.floor(Math.random()*PEKwords.length)];
+            
+            var name ="";
+            name = FirstnamePrefix+FirstnameSuffix+" "+LastnamePrefix+LastnameSuffix;
+            
+            myText.textContent= name;
+        }
+    </script>
+
 </body>
 </html>
