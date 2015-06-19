@@ -8,10 +8,11 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jQuery-One-Page-Nav/jquery.nav.js"></script>
     <!-- endbower -->
 
     <div class="alert alert-warning"><strong>Oh snap!</strong>  We now join our regularly scheduled Github Page, already in progress...</div>
-    <div class="jumbotron">
+    <div class="jumbotron" id="jumbotron1">
         <div class="jumbotron-photo">
                 <img src="img/jumbotron.jpg" width="100%">
         </div>
@@ -32,7 +33,7 @@
                 <img class="img-rounded" src="img/thumbnail-1.jpg">
                 <div class="caption text-center">
                     <h3>He's got some code.</h3
-                    ><p><i>"Fork this."</i></p>
+                    ><p><i>Fork this.</i></p>
                     <p><a href="https://github.com/stephencsmall" class="btn btn-primary" role="button">See it</a></p>
                 </div>
             </div>
@@ -41,8 +42,8 @@
                 <div class="thumbnail">
                     <img class="img-rounded" src="img/thumbnail-2.jpg">
                     <div class="caption text-center">
-                        <h3>The City of Champions</h3
-                        ><p><i>It's a Rust server.</i></p>
+                        <h3>He plays some games.</h3
+                        ><p><i>Ready Up!</i></p>
                         <p><a href="#" class="btn btn-danger" role="button">Go there</a> <a href="#" class="btn btn-default" role="button">Get lost</a></p>
                     </div>
                 </div>
@@ -53,8 +54,8 @@
                 <div class="thumbnail">
                     <img class="img-rounded" src="img/thumbnail-3.jpg">
                     <div class="caption text-center">
-                        <h3>It's a kitty!</h3
-                        ><p><i>"Hey Sailor!"</i></p>
+                        <h3>It's a kitty!</h3>
+                        <p><i>Hey Sailor!</i></p>
                         <p><a href="http://xkcd.com/231/" class="btn btn-primary" role="button">Feed kitty</a> <a href="http://xkcd.com/231/" class="btn btn-default" role="button">Meow</a></p>
                     </div>
                 </div>
@@ -98,6 +99,12 @@
             myText.textContent= name;
         }
     </script>
-
+    <script>
+        $('#jumbotron1').onePageNav({
+            currentClass: 'active',
+            changeHash: true,
+            scrollSpeed: 1200
+        });
+    </script>
 </body>
 </html>
