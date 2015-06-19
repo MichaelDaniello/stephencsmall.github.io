@@ -18,6 +18,6 @@
   "dependencies": {
     "jquery": "~2.1.3",
     "bootflat": "*",
-    "bootstrap": "~3.3.2"
+    "bootstrap": ~3.3.2
   }
 }
