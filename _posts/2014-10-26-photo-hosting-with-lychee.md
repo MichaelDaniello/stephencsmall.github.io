@@ -2,6 +2,7 @@
 layout: post
 title: Photo Hosting with Lychee
 ---
+
 # Introduction
 
 Since I started taking pictures, I haven't had a great place to keep them and share them with the world.  I post a lot of my stuff to Facebook, but overall that lacks a certain public / generic access feel to it.  When you want to share pictures to people on Facebook, they kind of need to be logged in to Facebook.  Not everybody wants to do that, and I find myself pulling back from the great social media monster too, so I want to move to something more mature.
