@@ -1,103 +1,25 @@
-<!DOCTYPE html>
-<html>
-	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-	<!-- endbower -->
-	<html>
-		<body>
-			<!-- bower:js -->
-			<script src="bower_components/jquery/dist/jquery.js"></script>
-			<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-			<script src="bower_components/jQuery-One-Page-Nav/jquery.nav.js"></script>
-			<!-- endbower -->
+---
+layout: default
+title: Steve's Blog
+---
+<div class="jumbotron" id="jumbotron1">
+	<div class="container">
+		<div class="jumbotron-contents">
+			<h1>He's a guy with a text editor.</h1>
+			<h2>More than 65% water.</h2>
+			<p>That's right, and carbon based.</p>
+			<h2>Some ability.</h2>
+			<p>Compiles stuff, puts it in places. Builds snarky websites.</p>
+		</div>
+	</div>
+</div>
 
-			<div class="alert alert-warning"><strong>Oh snap!</strong>  We now join our regularly scheduled Github Page, already in progress...</div>
-			<div class="jumbotron" id="jumbotron1">
-				<div class="jumbotron-photo">
-					<img src="img/jumbotron.jpg" width="100%">
-				</div>
-				<div class="container">
-					<div class="jumbotron-contents">
-						<h1>He's a guy with a text editor.</h1>
-						<h2>More than 65% water.</h2>
-						<p>That's right, and carbon based.</p>
-						<h2>Some ability.</h2>
-						<p>Compiles stuff, puts it in places. Builds snarky websites.</p>
-					</div>
-				</div>
-			</div>
-			<div class="container" role="main">
-				<div class="row">
-					<div class="col-sm-6 col-md-6">
-						<div class="thumbnail">
-							<img class="img-rounded" src="img/thumbnail-1.jpg">
-							<div class="caption text-center">
-								<h3>He's got some code.</h3>
-								<p><i>Fork this.</i></p>
-								<p><a href="https://github.com/stephencsmall" class="btn btn-primary" role="button">See it</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-6">
-						<div class="thumbnail">
-							<img class="img-rounded" src="img/thumbnail-2.jpg">
-							<div class="caption text-center">
-								<h3>He plays some games.</h3>
-								<p><i>Ready Up!</i></p>
-								<p><a href="http://steamcommunity.com/id/whiteflight" class="btn btn-primary" role="button">Steam Profile</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6 col-md-6">
-						<div class="thumbnail">
-							<img class="img-rounded" src="img/thumbnail-3.jpg">
-							<div class="caption text-center">
-								<h3>It's a kitty!</h3>
-								<p><i>Hey Sailor!</i></p>
-								<p><a href="http://xkcd.com/231/" class="btn btn-primary" role="button">Feed kitty</a> <a href="http://xkcd.com/231/" class="btn btn-default" role="button">Meow</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-6">
-						<div class="thumbnail">
-							<div class="caption text-center">
-								<div>
-									<h2 id="pekText">?</h2>
-								</div>
-								<h3>Popek Generator</h3
-								><p><i>Andrew built it. Check it <a href="https://github.com/andrew-guidetti">here.</a></i></p>
-								<p><a id="pekButton" class="btn btn-primary" role="button">Gimmie a Pek</a> <a href="https://youtu.be/jr0JaXfKj68" class="btn btn-default" role="button">One Pek only please</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<script>
-var myButton = document.getElementById("pekButton");
-var myText = document.getElementById("pekText");
-
-myButton.addEventListener('click', doSomething, false);
-
-function doSomething() {
-	myText.textContent = "hello, world!";
-
-	var PATwords = ["Pat","Pot","Poot","Pro","Pom","Pop","Porta","Pop","Pho","Pam","Patty","Patak","Pad"];
-	var RICKwords = ["rick","rock","ronk","rook","rank","root","rock","pick","stick","rickly"];
-	var POwords = ["Po","Pro","Lo","Sno","Poo","No","Pee","Jingle","Jangle","Pie","Toe"];
-	var PEKwords = ["pek","pok","pook","prok","pram","deck","fleck","check","chop","tech","gasm"];
-
-	var FirstnamePrefix = PATwords[Math.floor(Math.random()*PATwords.length)];
-	var FirstnameSuffix = RICKwords[Math.floor(Math.random()*RICKwords.length)];
-	var LastnamePrefix = POwords[Math.floor(Math.random()*POwords.length)];
-	var LastnameSuffix = PEKwords[Math.floor(Math.random()*PEKwords.length)];
-
-	var name ="";
-	name = FirstnamePrefix+FirstnameSuffix+" "+LastnamePrefix+LastnameSuffix;
-
-	myText.textContent= name;
-}
-			</script>
-		</body>
-	</html>
+<div class="container">
+	<h1>Read the stuff he thinks:</h1>
+	<br>
+	<ul class="posts">
+		{% for post in site.posts %}
+		<li><h4>&laquo; <a href="{{ post.url }}">{{ post.title }}</a><span>  {{ post.date | date_to_string }}</span></h4></li>
+		{% endfor %}
+	</ul>
+</div>
