@@ -1,0 +1,31 @@
+<div class="col-sm-4 blog-sidebar">
+<div class="sidebar-module sidebar-module-inset">
+	<h4>Words about me</h4>
+	<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+</div>
+<div class="sidebar-module">
+	<h4>Recent things I wrote</h4>
+	<ol class="list-unstyled">
+		{% for post in site.posts limit:20 %}
+		<li>
+			<span>{{ post.date | date_to_string }}</span> &raquo;
+			<a href="{{ BASE_PATH }}{{ post.url }}">
+				{{ post.title }}</a>
+		</li>
+		{% endfor %}
+	</ol>
+</div>
+<div class="sidebar-module">
+	<h4>You may remember me from</h4>
+	<ol class="list-unstyled">
+		<li><a href="https://github.com/stephencsmall">Github</a></li>
+		<li><a href="https://twitter.com/stevesmall">Twitter</a></li>
+		<li><a href="https://www.facebook.com/the.real.steve.small">Facebook</a></li>
+		<li><a href="https://plus.google.com/u/0/+StephenSmall/about">Google+</a></li>
+		<li><a href="http://www.twitch.tv/the_flight_director">Twitch</a></li>
+		<li><a href="http://steamcommunity.com/id/whiteflight">Steam</a></li>
+		<li><a href="https://www.flickr.com/people/133013618@N05/">Flickr</a></li>
+	</ol>
+</div>
+</div><!-- /.blog-sidebar -->
+
