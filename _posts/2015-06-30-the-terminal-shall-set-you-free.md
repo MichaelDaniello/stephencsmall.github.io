@@ -13,6 +13,6 @@ Since I started working professionally, I've had a fascination with the command 
 - Local music library in cmus
 - Stream Pandora using pianobar
 - Demonstrate keen style with vim-promptline, vim-airline
-- Extend my shelling with zsh / oh-my-zsh
+- Extend my shell with zsh / oh-my-zsh
 - Manage my tasks with todo.txt
 
